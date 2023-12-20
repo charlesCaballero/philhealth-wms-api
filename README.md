@@ -9,7 +9,7 @@ Laravel is accessible, powerful, and provides tools required for large, robust a
 First clone the project:
 
 ```bash
-git clone https://github.com/charlesCaballero/laravel-next-api.git
+git clone https://github.com/charlesCaballero/philhealth-wms-api.git
 ```
 
 Go inside your project folder then install all dependencies:
