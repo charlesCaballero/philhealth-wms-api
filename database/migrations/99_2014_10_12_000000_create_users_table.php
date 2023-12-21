@@ -13,8 +13,7 @@ return new class extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->id();
-            $table->string('hris')->unique();
-            $table->string('user_id')->unique()->nullable();
+            $table->bigInteger('hris')->unique();
             $table->string('fname');
             $table->string('mname');
             $table->string('lname');
@@ -37,16 +36,7 @@ return new class extends Migration
                     ->nullOnDelete('cascade');
         });
 
-        // // Add Spatie columns
-        // Schema::create('model_has_roles', function (Blueprint $table) {
-        //     $table->foreignId('role_id')->index();
-        //     $table->morphs('model');
-        // });
 
-        // Schema::create('model_has_permissions', function (Blueprint $table) {
-        //     $table->foreignId('permission_id')->index();
-        //     $table->morphs('model');
-        // });
     }
 
     /**
@@ -54,8 +44,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        // Schema::dropIfExists('model_has_roles');
-        // Schema::dropIfExists('model_has_permissions');
         Schema::dropIfExists('users');
     }
 };

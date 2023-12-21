@@ -35,7 +35,7 @@ class LaravelPermissionSeeder extends Seeder
 
         // Assign permissions to roles
         // Assign multiple permissions to the admin role
-        $adminRole->givePermissionTo([
+        $adminRole->syncPermissions([
             $accessPendingRequest ,
             $accessOngoingRequest ,
             $accessStorageRequest ,
@@ -49,12 +49,12 @@ class LaravelPermissionSeeder extends Seeder
             $accessMaps ,
             $accessGlossary
         ]);
-        $custodianRole->givePermissionTo([
+        $custodianRole->syncPermissions([
             $accessPendingRequest ,
             $accessMaps ,
             $accessGlossary
         ]);
-        $userRole->givePermissionTo([
+        $userRole->syncPermissions([
             $accessStorageRequest ,
             $accessWithdrawalRequest ,
             $accessReturnRequest,

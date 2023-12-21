@@ -16,6 +16,7 @@ class DatabaseSeeder extends Seeder
         $this->call([
             LaravelPermissionSeeder::class,
             OfficeSeeder::class,
+            UserSeeder::class,
         ]);
     }
 }
